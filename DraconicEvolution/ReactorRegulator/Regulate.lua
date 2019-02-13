@@ -161,18 +161,18 @@ function updateFluxInput(info)
 end
 
 
-buttons.stop = {label="Stop",action=stop,params={}}
-buttons.start = {label="Start",action=start,params={}}
+buttons.stop = {label="Stop",action=stop,params={},textColor=colors.red,bgColor=colors.gray}
+buttons.start = {label="Start",action=start,params={},textColor=colors.green,bgColor=colors.gray}
 
-buttons.increase1000 = {label=">",action=increaseTargetOutput,params={1000}}
-buttons.increase10000 = {label=">>",action=increaseTargetOutput,params={10000}}
-buttons.increase100000 = {label=">>>",action=increaseTargetOutput,params={100000}}
+buttons.increase1000 = {label=">",action=increaseTargetOutput,params={1000},textColor=colors.white,bgColor=colors.gray}
+buttons.increase10000 = {label=">>",action=increaseTargetOutput,params={10000},textColor=colors.white,bgColor=colors.gray}
+buttons.increase100000 = {label=">>>",action=increaseTargetOutput,params={100000},textColor=colors.white,bgColor=colors.gray}
 
-buttons.decrease1000 = {label="<",action=decreaseTargetOutput,params={1000}}
-buttons.decrease10000 = {label="<<",action=decreaseTargetOutput,params={10000}}
-buttons.decrease100000 = {label="<<<",action=decreaseTargetOutput,params={100000}}
+buttons.decrease1000 = {label="<",action=decreaseTargetOutput,params={1000},textColor=colors.white,bgColor=colors.gray}
+buttons.decrease10000 = {label="<<",action=decreaseTargetOutput,params={10000},textColor=colors.white,bgColor=colors.gray}
+buttons.decrease100000 = {label="<<<",action=decreaseTargetOutput,params={100000},textColor=colors.white,bgColor=colors.gray}
 
-buttons.NA = {label=nil,action=nil,params=nil}
+buttons.NA = {label=nil,action=nil,params=nil,textColor=nil,bgColor=nil}
 
 ButtonMap={}
 for i=1,29 do
@@ -207,7 +207,7 @@ function ButtonListener()
         event, side, xPos, yPos = os.pullEvent("monitor_touch")
         
         button = ButtonMap[i][j]
-        if button.action != nil then
+        if button.action != nil and button.params != nil then
             button.action(unpack(button.params))
         end
     end
