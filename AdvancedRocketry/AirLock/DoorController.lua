@@ -38,7 +38,7 @@ end
 
 -- returns true if a player is detected in the airlock
 function playerDetected()
-    return redstone.getAnalogInput(detectorSide) != 0
+    return redstone.getAnalogInput(detector) != 0
 end
 
 -- opens doors, needs monitor displays
