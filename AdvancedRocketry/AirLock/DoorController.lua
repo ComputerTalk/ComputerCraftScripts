@@ -83,7 +83,7 @@ function ButtonListener()
     }
     
     do
-        _,name,_,_ = os.PullEvent("monitor_touch")
+        _,name,_,_ = os.pullEvent("monitor_touch")
         switch[name]() 
     end
 end
