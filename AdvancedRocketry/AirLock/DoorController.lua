@@ -24,9 +24,6 @@ local outerExitMonitor = peripheral.wrap(outerExitMonitorName)
 local innerExitMonitor = peripheral.wrap(innerExitMonitorName)
 
 
--- make waiting nice
--- wait code
-
 
 
 -- opens the door passed in
@@ -52,33 +49,33 @@ function ButtonListener()
                 -- Access Denied
             else
                 closeDoor(innerDoor)
-                wait(3)
+                sleep(3)
                 openDoor(outerDoor)
-                wait(3)
+                sleep(3)
                 closeDoor(outerDoor)
             end
         end;
         [innerEntranceMonitorName] = function ()
             closeDoor(outerDoor)
-            wait(3)
+            sleep(3)
             openDoor(innerDoor)
-            wait(3)
+            sleep(3)
             closeDoor(innerDoor)
         
         end;
         [outerExitMonitorName] = function ()
             closeDoor(innerDoor)
-            wait(3)
+            sleep(3)
             openDoor(outerDoor)
-            wait(3)
+            sleep(3)
             closeDoor(outerDoor)
         
         end;
         [innerExitMonitorName] = function ()
             closeDoor(outerDoor)
-            wait(3)
+            sleep(3)
             openDoor(innerDoor)
-            wait(3)
+            sleep(3)
             closeDoor(innerDoor)
         
         end
