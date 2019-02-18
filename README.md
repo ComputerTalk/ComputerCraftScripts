@@ -6,5 +6,4 @@ These scripts are in progress, it is not expected for them to work properly unti
 
 ### Get and run the airlock code
 > \> pastebin get hEgGXZpm airlock
-
 > \> airlock
