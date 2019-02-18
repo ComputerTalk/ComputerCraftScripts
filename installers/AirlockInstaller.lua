@@ -1,5 +1,5 @@
  
-local airlockURL = "https://raw.githubusercontent.com/acidjazz/drmon/master/drmon.lua"
+local airlockURL = "https://raw.githubusercontent.com/ComputerTalk/ComputerCraftScripts/master/AdvancedRocketry/AirLock/DoorController.lua"
 
 local airlock
 local airlockFile
