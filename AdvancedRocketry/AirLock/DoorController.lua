@@ -82,7 +82,7 @@ function ButtonListener()
         end
     }
     
-    do
+    while true do
         _,name,_,_ = os.pullEvent("monitor_touch")
         switch[name]() 
     end
