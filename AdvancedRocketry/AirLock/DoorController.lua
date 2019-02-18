@@ -38,7 +38,7 @@ end
 
 -- returns true if a player is detected in the airlock
 function playerDetected()
-    ret_val = redstone.getAnalogInput(detector) != 0
+    ret_val = redstone.getAnalogInput(detector) ~= 0
     return ret_val
 end
 
